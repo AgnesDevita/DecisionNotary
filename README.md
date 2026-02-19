@@ -237,4 +237,7 @@ The full pipeline has been tested end-to-end on BSC Testnet:
 - **Jonathan** — Backend (parser, hasher, notary, API)
 - **Christian** — Smart contracts (ContextSnapshot, ERC-8004, ReputationAggregator)
 - **Agnes** — Frontend (React UI, leaderboard, demo)
+
+X: https://x.com/NotaryDecision
+
 <img width="1536" height="2706" alt="unnamed-23" src="https://github.com/user-attachments/assets/2714b1ba-7388-4fc7-a135-b0671c3afa0c" />
