@@ -2,6 +2,9 @@
 
 Notarise AI-agent reasoning **on-chain** (BNB Chain / BSC Testnet) before an agent acts. After the outcome is known, record whether the reasoning held and build a verifiable reputation trail.
 
+<img width="2752" height="1536" alt="Gemini_Generated_Image_uw4t77uw4t77uw4t" src="https://github.com/user-attachments/assets/230256a2-3590-46b9-8df2-e030d7a6d950" />
+
+
 ## How It Works
 
 ```
@@ -234,3 +237,4 @@ The full pipeline has been tested end-to-end on BSC Testnet:
 - **Jonathan** — Backend (parser, hasher, notary, API)
 - **Christian** — Smart contracts (ContextSnapshot, ERC-8004, ReputationAggregator)
 - **Agnes** — Frontend (React UI, leaderboard, demo)
+<img width="1536" height="2706" alt="unnamed-23" src="https://github.com/user-attachments/assets/2714b1ba-7388-4fc7-a135-b0671c3afa0c" />
