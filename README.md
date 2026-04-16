@@ -55,8 +55,28 @@ DecisionNotary/
 │   └── src/
 │       ├── ContextSnapshot.sol
 │       └── ContextSnapshotFactory.sol
+├── ledger/                     # Lightweight token ledger (Jonathan's v2 direction)
+│   ├── main.go                 # single Go binary, zero deps
+│   ├── ledger.go               # hash-chain + Merkle orchestration
+│   ├── merkle.go               # RFC 6962 Merkle tree + inclusion proofs
+│   ├── signing.go              # Ed25519 Signed Tree Heads
+│   ├── store.go                # append-only JSONL store
+│   ├── server.go               # HTTP API (append / head / proof / verify)
+│   └── README.md               # full design + AI-accountability story
 └── frontend/                   # React UI (Agnes's work)
 ```
+
+## Two layers of notarisation
+
+| Layer | Where it runs | Good for | Cost per record |
+|---|---|---|---|
+| **On-chain** (`backend/` + `contracts/`) | BSC Testnet | public, adversarial verification | one tx of gas |
+| **Ledger** (`ledger/`) | Inside your own infra | high-frequency, per-decision auditability | 2× SHA-256 + one fsync |
+
+The ledger uses the same RFC 6962 design as Certificate Transparency — a
+single Go binary + an append-only file — and can periodically anchor its
+32-byte Merkle root on-chain to combine both trust models. See
+[`ledger/README.md`](./ledger/README.md) for the full walkthrough.
 
 ## Quick Start (Backend)
 

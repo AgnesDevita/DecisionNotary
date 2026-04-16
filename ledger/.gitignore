@@ -1,0 +1,9 @@
+# Runtime artefacts — never commit the live log or signing key.
+ledger.jsonl
+ledger.key
+*.jsonl
+*.key
+
+# Build outputs.
+/notary-ledger
+/ledger
